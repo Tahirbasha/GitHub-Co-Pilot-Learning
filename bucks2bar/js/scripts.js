@@ -1,4 +1,23 @@
 window.onload =  function () {
+    // input element with id "username" on input event
+    const usernameInput = document.getElementById('username');
+    usernameInput.addEventListener('input', function () {
+        const username = usernameInput.value;
+        // regex to check if username contains atleast one capital letter, one number and one special character
+        const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (regex.test(username)) {
+            usernameInput.style.borderColor = 'green';
+            usernameInput.style.backgroundColor = 'lightgreen';
+        } else {
+            usernameInput.style.borderColor = 'red';
+            usernameInput.style.backgroundColor = 'lightcoral';
+        }
+        // Display the username in the div with id "username-display"
+        const usernameDisplay = document.getElementById('username-display');
+        usernameDisplay.textContent = username;
+        usernameDisplay.style.display = username ? 'block' : 'none';
+    }); 
+
         document.getElementById('downloadBtn').addEventListener('click', function () {
         const canvas = document.getElementById('barChart');
         const image = canvas.toDataURL('image/png'); // Convert canvas to PNG image
