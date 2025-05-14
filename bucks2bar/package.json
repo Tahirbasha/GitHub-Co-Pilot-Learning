@@ -1,0 +1,15 @@
+{
+  "name": "bucks2bar",
+  "version": "1.0.0",
+  "description": "The \"bucks2bar\" project is a web application that utilizes Bootstrap for responsive design and includes custom styles and scripts to enhance functionality and appearance.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
